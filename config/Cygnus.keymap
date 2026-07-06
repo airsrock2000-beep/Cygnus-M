@@ -113,7 +113,7 @@
             &to 0  &trans  &trans  &kp LC(PG_UP)  &kp LC(PG_DN)  &kp LG(R)  &kp LG(R)  &kp LC(PG_UP)  &kp LC(PG_DN)  &mkp MB2  &trans  &trans
             &trans  &lt 5 SPACE  &lt 4 SPACE  &mkp MB1  &mkp MB2  &mkp MB3  &mkp MB3  &trans  &mkp MB3  &mkp MB1  &mkp MB2  &lt 4 SPACE  &lt 5 SPACE  &trans
             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &kp INT4  &kp INT5  &mkp MB4  &mkp MB5  &trans  &trans
+            &trans  &trans  &trans  &trans  &kp INT4  &kp INT5  &trans  &mkp MB4  &mkp MB5  &trans  &trans
             >;
         };
 

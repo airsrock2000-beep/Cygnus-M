@@ -90,8 +90,8 @@
 
         NUM {
             bindings = <
-&to 0 &kp LS(N1) &kp LEFT_BRACE &kp LS(N3) &kp LS(N4) &kp LS(N5)                          &kp N7 &kp N8 &kp N9 &kp KP_PLUS &kp KP_SLASH &kp BSPC
-&kp SEMI &kp LS(N8) &kp LS(N9) &kp RIGHT_BRACE &kp NON_US_HASH &kp LS(N6) &kp LC(LA(KP_N0)) &kp KP_00 &kp N4 &kp N5 &kp N6 &kp MINUS &kp LS(MINUS) &kp UP
+&to 0 &kp LS(N1) &kp LEFT_BRACKET &kp LS(N3) &kp LS(N4) &kp LS(N5)                          &kp N7 &kp N8 &kp N9 &kp KP_PLUS &kp KP_SLASH &kp BSPC
+&kp SEMI &kp LS(N8) &kp LS(N9) &kp RIGHT_BRACKET &kp NON_US_HASH &kp LS(N6) &kp LC(LA(KP_N0)) &kp KP_00 &kp N4 &kp N5 &kp N6 &kp MINUS &kp LS(MINUS) &kp UP
 &kp SQT &kp LS(RIGHT_BRACE) &kp LS(NON_US_HASH) &kp LS(SQT) &kp LS(INT1) &kp LS(EQUAL) &kp LG(LS(S)) &kp N0 &kp N1 &kp N2 &kp N3 &kp LS(SQT) &kp SQT &kp DOWN
 &kp CAPS &trans &trans &trans &kp LC(LA(DEL)) &trans &tog 2 &kp INT4 &kp INT5 &kp LS(LEFT) &kp RIGHT
             >;

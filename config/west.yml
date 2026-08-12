@@ -19,7 +19,7 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: airsrock2000-beep
-      revision: main
+      revision: debug-motion-log
       path: modules/zmk-pmw3610-driver
     - name: zmk-rgbled-widget
       remote: caksoylar

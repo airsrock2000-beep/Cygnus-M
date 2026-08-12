@@ -91,9 +91,10 @@ manifest:
     - name: zmk-driver-pmw3610-with-custom-studio-rpc
       remote: cormoran
       revision: main
+    # v0.3は旧ボード名(seeeduino_xiao_ble)向けoverlayのみ→mainはxiao_ble_zmk.overlay対応済み
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3
+      revision: main
 
   self:
     path: config

@@ -28,13 +28,14 @@
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>;
 
         /* 旧ドライバの scroll-layers = <5> / SCROLL_TICK=64 / INVERT_SCROLL_X=y の代替:
-           レイヤー5（SCROLL）では移動をスクロールへ変換し、1/64 に減速、横だけ反転 */
+           レイヤー5（SCROLL）では移動をスクロールへ変換し、1/64 に減速、横に加え
+           縦も反転（2026-08-13 秀星さん依頼「トラックボールモードの上下も逆に」） */
         scroller {
             layers = <5>;
             input-processors
                 = <&zip_xy_to_scroll_mapper>
                 , <&zip_scroll_scaler 1 64>
-                , <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>
+                , <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
                 ;
         };
     };

@@ -2,6 +2,8 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+/* 2026-09-04: DYA Studio「Trackball」タブ用のランタイム入力プロセッサ（未配線で「見つかりません」だった） */
+#include <input/processors/runtime-input-processor.dtsi>
 
 &default_transform {
     col-offset = <7>;
@@ -25,7 +27,7 @@
 
         /* ポインタ移動の左右を反転（2026-08-13 秀星さん依頼）。
            スクロールは scroller 子ノード側が先に REL_HWHEEL へ変換するため影響しない */
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>, <&mouse_runtime_input_processor>;
 
         /* 旧ドライバの scroll-layers = <5> / SCROLL_TICK=64 / INVERT_SCROLL_X=y の代替:
            レイヤー5（SCROLL）では移動をスクロールへ変換し、1/64 に減速、横に加え
@@ -36,6 +38,7 @@
                 = <&zip_xy_to_scroll_mapper>
                 , <&zip_scroll_scaler 1 64>
                 , <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
+                , <&scroll_runtime_input_processor>
                 ;
         };
     };

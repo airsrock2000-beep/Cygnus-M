@@ -38,8 +38,10 @@
                 = <&zip_xy_to_scroll_mapper>
                 , <&zip_scroll_scaler 1 64>
                 , <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
-                , <&scroll_runtime_input_processor>
                 ;
+            /* 2026-09-04 16:20: &scroll_runtime_input_processor を末尾に足したらスクロールが止まった
+               （1/64減速後の小さな値がランタイム側で捨てられる模様）→ スクロール側は8/13の配線に戻す。
+               マウス移動側の &mouse_runtime_input_processor は残す。 */
         };
     };
 };
